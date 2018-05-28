@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<People><person id="3493537"><name>Pablo</name><firstLastname>Rojas</firstLastname><secondLastname>Martínez</secondLastname><birthdate>03/13/1996</birthdate><country>Costa Rica</country><parentId>3244361</parentId></person><person id="3244361"><name>Álvaro</name><firstLastname>Rojas</firstLastname><secondLastname>Quirós</secondLastname><birthdate>12/15/1960</birthdate><country>Costa Rica</country><parentId>1234567</parentId></person></People>
