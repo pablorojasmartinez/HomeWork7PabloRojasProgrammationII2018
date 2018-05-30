@@ -1,5 +1,6 @@
 package data;
 
+import domain.Dat;
 import domain.Person;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -131,10 +132,9 @@ public class XMLPersonFile {
             LocalDate currentDate = LocalDate.now();
             Period period = Period.between(birthDate, currentDate);
             String years = String.valueOf(period.getYears());
-            
+
             //Esta linea sirve para que aparezca la fecha y no los años
             //currentPerson.setBirthdate(currentElement.getChild("birthdate").getValue());
-            
             //Esta linea sirve para que aparezca los años y no la fecha
             currentPerson.setBirthdate(years);
             currentPerson.setCountry(currentElement.getChild("country").getValue());
@@ -197,5 +197,49 @@ public class XMLPersonFile {
         }//catch
         this.position = 0;
     }//update
+
+//    public Person [] devolverArblo(String cedula){
+//    Person vector[];
+////    Array<>
+//    Person VectorArchivo[]=getPeople();
+//    for(int i=0;i<VectorArchivo.length;i++){
+//    if(cedula.equals(VectorArchivo[i].getParentId())){
+//           for(int j=0;j<VectorArchivo.length;j++){
+//    vector=new Person[j];
+//    }}
+//    
+//    }
+//    
+//    
+//    }
+    public Person[]  getTable(String id) {
+//        int peopleQuantity = this.root.getContentSize();
+//        List elementList = this.root.getChildren();
+        Person[] arrayPerson = getPeople();
+        int cont = 0;
+        int count = 1;
+
+Person[] vector = null;
+        for (int j = 0; j < count; j++) {
+            for (int i = 0; i < arrayPerson.length; i++) {
+//            Element currentElement = (Element) currentObject;
+//            Person currentPerson = new Person();
+if(id==arrayPerson[i].getParentId()){
+vector[count]=arrayPerson[i];
+count++;
+}
+else if(i==arrayPerson.length){
+count++;
+cont++;
+id=vector[cont].getId();
+}
+
+                
+
+//            arrayPerson[count++] = currentPerson;
+            }//for
+        }
+        return arrayPerson;
+    }//getPeople
 
 }//class
