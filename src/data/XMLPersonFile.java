@@ -75,6 +75,7 @@ public class XMLPersonFile {
         Element eBirthdate = new Element("birthdate");
         eBirthdate.addContent(person.getBirthdate());
 
+        
         Element eCountry = new Element("country");
         eCountry.addContent(person.getCountry());
 
